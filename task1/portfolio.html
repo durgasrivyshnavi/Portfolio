@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Personal Portfolio Website</title>
+    <link rel="stylesheet" href="C:\Users\vyshn\OneDrive\Desktop\task1\portfolio.css">
+    <script src="https://kit.fontawesome.com/9c2f4ef434.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="h">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li> <a href="#h">Home</a></li>
+                    <li> <a href="#about">About</a></li>
+                    <li> <a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text"></div>
+            <p>Student at Vignan</p>
+            <p class="text">Hi, I'm <span> Vyshnavi </span><br> Currently persuing MCA.</p>
+        </div>
+                                      <!-------------------------------about me-------------------------------->
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img.jpg">
+                    
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1><br>
+                    <p><ul type="Bullets">
+
+                    <li>I am an enthusiastic, self-motivated, reliable, responsible 
+                        and hard working person.</li>
+                        <li>I am able to work well 
+                        both in a team environment as well as using own initiative. </li>
+                        <li>I am able to work well under pressure and adhere to strict deadlines</li></ul></p>
+                        <br>
+                        <br>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Experience')" >Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li>
+                                    <span>Full Stack</span><br>HTML,CSS,JavaScript
+                                </li>
+                                <li><span>Web development</span><br>Web App Development</li>
+                                <li><span>Certifications</span><br>Certified on C,java,Python</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Experience">
+                            <ul>
+                                <li>
+                                    <span>2025-2026</span><br>Internship at BharathIntern
+                                </li>
+                                <li><span>2022-2023</span><br>Intern at Web Development</li>
+                                <li><span>2021-2022</span><br>Project on E-commerce</li>
+                                <li><span>2022-2023</span><br>Case-Study on Machine Learning</li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li>
+                                    <span>2022-2024</span><br>Pursuing MCA at Vignan
+                                </li>
+                                <li><span>2019-2021</span><br>Graduation at A.S.N.Degree College</li>
+                                <li><span>2018-2019</span><br>Completed Intermediate at Sri Chaitanya Junior College </li>
+                                <li><span>2017-2018</span><br>Completed SSC in S.D.I.M.G.H.School </li>
+                            </ul>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1>Contact Me</h1>
+                <p> <i class="fa-solid fa-paper-plane"></i> sample@contact.com</p>
+           
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://in.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i></a>
+                </div>
+                <a href="allimages/my-cv.pdf" download class="btn btn2s"> Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form >
+                    <input type="text" name="Name" placeholder="Your name" required>
+                    <input type="text" name="email" placeholder="your Email" required>
+                    <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+</div>
+
+
+    <script>
+
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+</html>
